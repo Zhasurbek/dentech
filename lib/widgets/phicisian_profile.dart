@@ -9,24 +9,29 @@ class PhicisianProfile extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           Container(
+            height: 350,
             width: double.infinity,
-            color: Colors.transparent,
-            height: 300,
-            child: Image.asset('assets/phicisian/doctor.jpg'),
-          ),
-          Container(
-            padding: const EdgeInsets.symmetric(vertical: 20),
-            alignment: Alignment.bottomLeft,
+            margin: const EdgeInsets.only(top: 20),
+            padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: <Color>[
-                  Colors.black.withAlpha(0),
-                  Colors.black12,
-                  Colors.black45
-                ],
+              borderRadius: BorderRadius.circular(15),
+              color: Colors.transparent,
+              image: const DecorationImage(
+                image: AssetImage('assets/phicisian/doctor.jpg'),
+                fit: BoxFit.cover,
               ),
             ),
-            child: const Text('Founder CEO\nDr. Farhad'),
+            child: const Align(
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                'Founder CEO\nDr Farhad',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  letterSpacing: 0.8,
+                ),
+              ),
+            ),
           ),
         ],
       ),

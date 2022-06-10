@@ -1,3 +1,4 @@
+import 'package:dentech/widgets/phicisian_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -10,12 +11,11 @@ class DentechHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(18),
-        child:  Column(
+        padding: const EdgeInsets.all(30),
+        child: Column(
           children: [
-            Expanded(
-              child:  Image.asset('assets/phicisian/doctor.jpg'),
-            ),
+            PhicisianProfile(key: key),
+            PhicisianProfile(key: key),
           ],
         ),
       ),
