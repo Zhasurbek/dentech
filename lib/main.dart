@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dentech/screens/dentech_home.dart';
 
-
 void main() => runApp(const DentechApp());
 
 class DentechApp extends StatelessWidget {
@@ -12,6 +11,7 @@ class DentechApp extends StatelessWidget {
     const String appName = 'Dentech';
     return const MaterialApp(
       title: appName,
+      debugShowCheckedModeBanner: false,
       home: DentechHome(),
     );
   }
